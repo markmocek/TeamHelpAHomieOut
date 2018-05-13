@@ -41,9 +41,5 @@ The main page is where the user is sent after the login process. There the user 
 
 The user profile page will be able to be access through the main page of the application. Once there, the user will be given the option to alter some of the information stored for them in the database.
 
-## Google Places API Key
-AIzaSyDmXV3an8X6kp1AHTuTIXjbS9LcgsInPJo
-
-https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=36.6516,-121.7978&radius=20000&opennow&type=restaurant&keyword=pizza&key=AIzaSyDmXV3an8X6kp1AHTuTIXjbS9LcgsInPJo
 ## Deployment Link
-https://helpahomieout-9414f.firebaseapp.com/login
+https://markmocek.github.io/TeamHelpAHomieOut/
