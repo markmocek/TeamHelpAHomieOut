@@ -11,7 +11,7 @@ export class MainPageComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  resturants = [];
+  resturants: any[] = [];
 
   ngOnInit() {
   }
@@ -25,12 +25,11 @@ export class MainPageComponent implements OnInit {
       })
     };
 
-    this.http.get(environment.yelpApi.urlBase, opts).subscribe(
-      res =>
-        // {
-        console.log(res)
-      // this.resturants = res;
-      // }
+    this.http.get(environment.googlePlaces.urlBase + 'pizza' + environment.googlePlaces.key, opts).subscribe(
+      res => {
+        console.log(res);
+        // this.resturants = res;
+      }
     );
   }
 

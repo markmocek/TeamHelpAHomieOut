@@ -8,8 +8,9 @@ export const environment = {
     storageBucket: '',
     messagingSenderId: '466897444830'
   },
-  yelpApi: {
-    key: 'Och20lKS23t1op8Bd1hr8ZZ73rBz2xJGCcpoEZKcmFGFb_g93igmMOjVaHr4_hOnpdgAgHSrE8bx7807RZX5zo0rx-Ie1chtVxg0Ry5kgaPjWiTOxmCjaxzazVXdWnYx',
-    urlBase: 'https://api.yelp.com/v3/businesses/search'
+  googlePlaces: {
+    key: '&key=AIzaSyDmXV3an8X6kp1AHTuTIXjbS9LcgsInPJo',
+    urlBase: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?'
+      + 'location=36.6516,-121.7978&radius=20000&opennow&type=restaurant&keyword=&key='
   }
 };
