@@ -1,45 +1,28 @@
 # HelpAHomieOut
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
-
-## Development server
-
-Run `ng serve --host $IP --port $PORT --disable-host-check` go to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-
-# HelpAHomieOut Functions
-
-## Login Page
-
-User starts on the login page where they either login in as an existing user or make a new account. Making a new account will prompt the user for information that will be stored in the Firebase database.
-
-## Main Page
-
-The main page is where the user is sent after the login process. There the user will be able to enter parameters into a search bar that will query the Yelp API. The information taken from the API will then be displayed for the user.
-
-## User Profile Page
-
-The user profile page will be able to be access through the main page of the application. Once there, the user will be given the option to alter some of the information stored for them in the database.
+## Requirements
+In order to view API results a Google Chrome CORS extension is required. Without this extension an access error will be thrown and no data will be retrieved by the call.
 
 ## Deployment Link
 https://markmocek.github.io/TeamHelpAHomieOut/
+
+## Known BUGS
+Login-Page: Users will be denied when entering their username/password on the first attempt. If username and password were entered correctly, simple pressing enter or the submit button a second time will log the user in.
+
+# HelpAHomieOut Functions
+
+## Main Page
+
+The main page is where the user is sent after the login process. There the user will be able to enter parameters into a search bar that will query the Google Places API. The information taken from the API will then be displayed for the user.
+
+## Login Page
+
+The login page where users will login in as an existing user. Until logged in, user will be 'Please login' and have default information.
+
+## Register Page
+
+User can make a new account. Making a new account will prompt the user for information that will be stored in the Firebase database.
+
+## User Profile Page
+
+The user profile page will be able to be access through the main page of the application. Once there, the user will be given the information that is stored on them in the database.
