@@ -12,7 +12,7 @@ export class MainPageComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  resturants = [];
+  restaurants = Array<Restaurant>();
   searchParam: string = '';
   
   ngOnInit() {
@@ -20,22 +20,20 @@ export class MainPageComponent implements OnInit {
 
   onSubmit(e) {
     event.preventDefault();
-    this.resturants = [];
+    this.restaurants = [];
     this.http.get(environment.googlePlaces.urlBase + this.searchParam + environment.googlePlaces.key)
-      .subscribe(
-      res => {
-        res.results.forEach(e => {
-          var resturant = {
-            name: e.name,
-            rating: e.rating,
-            address: e.vicinity
-          }
-          this.resturants.push(resturant)
-          console.log(resturant)
-        });
-      }
-      );
+    .subscribe((res: GoogleAPI) => this.restaurants = res.results);
 
   }
 
+}
+
+interface Restaurant {
+  name: string,
+  rating: number,
+  vicinity: string
+}
+
+interface GoogleAPI {
+  results: Array<Restaurant>
 }
