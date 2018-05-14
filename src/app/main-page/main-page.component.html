@@ -8,13 +8,14 @@
 
 		<form (submit)="onSubmit($event)" class="form-inline my-2 my-lg-0">
 			<input class="form-control mr-sm-2" type="text" placeholder="Search"
-				aria-label="Search">
+				aria-label="Search" [(ngModel)]="searchParam" name="noonecares">
 			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 		</form>
 
 		<div class="apiOutput">
+			<p>NAME - RATING - ADDRESS</p>
 			<div *ngFor="let resturant of resturants">
-				<p>{{resturant.name}}</p>
+				<p>{{resturant.name}} - {{resturant.rating}} - {{resturant.address}}</p>
 			</div>
 		</div>
 	</div>

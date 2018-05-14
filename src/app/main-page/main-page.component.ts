@@ -12,20 +12,29 @@ export class MainPageComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  resturants = <Object>[];
-
+  resturants = [];
+  searchParam: string = '';
+  
   ngOnInit() {
   }
 
   onSubmit(e) {
     event.preventDefault();
-
-    this.http.get(environment.googlePlaces.urlBase + 'pizza' + environment.googlePlaces.key).subscribe(
+    this.resturants = [];
+    this.http.get(environment.googlePlaces.urlBase + this.searchParam + environment.googlePlaces.key)
+      .subscribe(
       res => {
-        console.log('HERE IS RETURNED CALL: ' + res);
-        this.resturants = res;
+        res.results.forEach(e => {
+          var resturant = {
+            name: e.name,
+            rating: e.rating,
+            address: e.vicinity
+          }
+          this.resturants.push(resturant)
+          console.log(resturant)
+        });
       }
-    );
+      );
 
   }
 

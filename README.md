@@ -4,6 +4,7 @@
 In order to view API results a Google Chrome CORS extension is required. Without this extension an access error will be thrown and no data will be retrieved by the call.
 
 Allow-Control-Allow-Origin: * offered by vitvad
+https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en
 
 ## Deployment Link
 https://markmocek.github.io/TeamHelpAHomieOut/
