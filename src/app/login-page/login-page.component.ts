@@ -42,15 +42,14 @@ export class LoginPageComponent implements OnInit {
       this.user.favFoods = x.favfoods;
       this.user.idUrl = x.idUrl;
       this.user.password = x.password;
-    });
 
-    if (form.password === this.user.password) {
-      this.userID = [form.username];
-      this._data.changeCurrentUser(this.userID);
-      this.router.navigate(['/']);
-    } else {
-      this.htmlVariable = '<font color="red">Wrong username or password'
-        + '<p><b>BUG: If this is your first attempt, hit sumbit again.</b></font>';
-    }
+      if (form.password === this.user.password) {
+        this.userID = [form.username]
+        this._data.changeCurrentUser(this.userID);
+        this.router.navigate(['/']);
+      } else {
+        this.htmlVariable = '<font color="red">Wrong username or password</font>';
+      }
+    })
   }
 }
