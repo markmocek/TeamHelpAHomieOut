@@ -9,9 +9,6 @@ https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeac
 ## Deployment Link
 https://markmocek.github.io/TeamHelpAHomieOut/
 
-## Known BUGS
-Login-Page: Users will be denied when entering their username/password on the first attempt. If username and password were entered correctly, simple pressing enter or the submit button a second time will log the user in.
-
 # HelpAHomieOut Functions
 
 ## Main Page
