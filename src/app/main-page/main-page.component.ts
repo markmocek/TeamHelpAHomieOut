@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../environments/environment';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-main-page',
@@ -11,7 +12,7 @@ export class MainPageComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  //  resturants = [];
+  resturants = <Object>[];
 
   ngOnInit() {
   }
@@ -19,20 +20,12 @@ export class MainPageComponent implements OnInit {
   onSubmit(e) {
     event.preventDefault();
 
-    const opts = {
-      headers: new HttpHeaders({
-        'Authorization': 'Bearer YELP_API_TOKEN_HERE'
-      })
-    };
-
     this.http.get(environment.googlePlaces.urlBase + 'pizza' + environment.googlePlaces.key).subscribe(
       res => {
-        console.log(res);
-        // this.urants = res;
+        console.log('HERE IS RETURNED CALL: ' + res);
+        this.resturants = res;
       }
     );
-
-
 
   }
 

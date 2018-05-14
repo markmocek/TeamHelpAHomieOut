@@ -7,20 +7,21 @@
 			hungry, college students.</p>
 
 		<form (submit)="onSubmit($event)" class="form-inline my-2 my-lg-0">
-        	<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    	</form>
-    	
-    	<!-- <div class="apiOutput">
-    		<div *ngFor="let resturant of resturants">
-    			<p>{{resturant.name}}</p>
-    		</div>
-    	</div> -->
+			<input class="form-control mr-sm-2" type="text" placeholder="Search"
+				aria-label="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+
+		<div class="apiOutput">
+			<div *ngFor="let resturant of resturants">
+				<p>{{resturant.name}}</p>
+			</div>
+		</div>
 	</div>
-	
+
 	<div class="googleMap">
-		<iframe width="1000" height="400" frameborder="0" style="border:20" 
-		src="https://www.google.com/maps/embed/v1/search?q=food&key=AIzaSyBWtNef8OkLfOkVR5XYtQIyU2TP82yRy_E" 
-		allowfullscreen></iframe>
+		<iframe width="1000" height="400" frameborder="0" style="border: 20"
+			src="https://www.google.com/maps/embed/v1/search?q=food&key=AIzaSyBWtNef8OkLfOkVR5XYtQIyU2TP82yRy_E"
+			allowfullscreen></iframe>
 	</div>
 </div>

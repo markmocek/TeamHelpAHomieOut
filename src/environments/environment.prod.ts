@@ -11,6 +11,6 @@ export const environment = {
   googlePlaces: {
     key: '&key=AIzaSyDmXV3an8X6kp1AHTuTIXjbS9LcgsInPJo',
     urlBase: 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?'
-      + 'location=36.6516,-121.7978&radius=20000&opennow&type=restaurant&keyword=&key='
+      + 'location=36.6516,-121.7978&radius=20000&opennow&type=restaurant&keyword='
   }
 };
